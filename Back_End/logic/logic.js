@@ -10,9 +10,11 @@ import{ dummydata} from "../libs/data.js"
 
 function Calculations() {
     
-    const testData = dummydata[0]
+const testData = dummydata[0]
 const baseRate = 120;
 let result ;
+let result1;
+let total;
 //breed discount
 const breedDiscountId = ['chow chow','poodle','retriever']
 const breedDiscount = 0.9
@@ -22,12 +24,19 @@ const areaIncrease = 1.15
 
 let ageIncrease = 1
 
-if (testData.breed.includes('chow chow') ||testData.breed.includes('poodle')|| testData.breed.includes('retriever')   ){
- result = baseRate * breedDiscount;
-} else {
-    result = 120
+for (let i = 0 ; i<testData.pets.length; i++){
+    if (testData.pets[i].breed.includes('chow chow') ||testData.pets[i].breed.includes('poodle')|| testData.pets[i].breed.includes('retriever')   ){
+       result = baseRate * breedDiscount;
+       } else {
+           result1 = 120
+       }
+ total =result+result1
+ console.log(total)
 }
-console.log (result)
+
+
+
 }
+
 
 Calculations()
