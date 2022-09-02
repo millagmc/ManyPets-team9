@@ -1,37 +1,35 @@
-import express from "express";
+import express from 'express';
 const router = express.Router();
 
-import {dummydata} from "../libs/data.js"
+import { dummydata } from '../libs/data.js';
 
-
-router.get('/api/quotes', function(req, res, next) {
+router.get('/api/quotes', function (req, res, next) {
   // res.render('index', { title: 'Express' });
   res.json({
-    message: "success",
-    payload: dummydata
-  })
+    message: 'success',
+    payload: dummydata,
+  });
 });
 
-router.get('/api/quotes/:id', function(req, res, next) {
-  const {id} = req.params
-  const setId = Number(id)
-  console.log(setId)
+router.get('/api/quotes/:id', async function (req, res, next) {
+  const { id } = req.params;
+  const setId = Number(id);
+  const data = await callId(setId);
 
-
-  function callId(setId) {
-    if (setId === dummydata.id){
-      res.json({
-        message: "success",
-        payload: dummydata
-      })
-    } else {
-      return ('Data does not exist')
-    }
-    
-  }  
-
-  callId(setId)
- 
+  async function callId(setId) {
+    return dummydata.filter((input) => {
+      {
+        if (input.id === setId) {
+          console.log(input);
+          return input;
+        }
+      }
+    });
+  }
+  res.json({
+    message: 'success',
+    payload: { data },
+  });
 });
 
-export default router; 
+export default router;
