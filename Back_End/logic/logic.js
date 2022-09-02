@@ -30,7 +30,6 @@ for (let i = 0 ; i<testData.pets.length; i++){
        } else {
            result1 = 120
        }
- total = result+result1
 }
 if (testData.postcode.includes("NW5")||testData.postcode.includes("SE1")||testData.postcode.includes("SW1")){
     total = total *1.15
