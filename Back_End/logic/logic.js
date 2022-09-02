@@ -31,10 +31,23 @@ for (let i = 0 ; i<testData.pets.length; i++){
            result1 = 120
        }
  total = result+result1
- console.log(total)
+}
+if (testData.postcode.includes("NW5")||testData.postcode.includes("SE1")||testData.postcode.includes("SW1")){
+    total = total *1.15
+    // console.log(total);
+} else {
+    // console.log(total)
 }
 
-
+for ( let i = 0; i<testData.pets.length;i++ ){
+    if (pet_age > 0 && pet_age<=5){
+        total = (total+(baseRate*(0.05*pet_age)))
+        console.log(total)
+    }else if ( pet_age>5 && pet_age<=10){
+        total = (total+(baseRate*(0.10*pet_age)))
+        console.log(total) 
+    }
+}
 
 }
 
