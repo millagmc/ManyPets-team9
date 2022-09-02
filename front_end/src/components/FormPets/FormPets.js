@@ -47,6 +47,7 @@ import React from 'react';
          /* and other goodies */
        }) => (
         <form onSubmit={handleSubmit}>
+          <label htmlFor="firstName">First Name</label>
            <input
              type="firstName"
              name="firstName"
@@ -55,6 +56,7 @@ import React from 'react';
              value={values.firstName}
            />
            {errors.firstName && touched.firstName && errors.firstName}
+           <label htmlFor="surname">Surname</label>
             <input
              type="surname"
              name="surname"
@@ -63,6 +65,7 @@ import React from 'react';
              value={values.surname}
            />
            {errors.surname && touched.surname && errors.surname}
+           <label htmlFor="address">Address</label>
            <input
              type="address"
              name="address"
@@ -71,6 +74,7 @@ import React from 'react';
              value={values.address}
            />
            {errors.address && touched.address && errors.address}
+           <label htmlFor="postcode">Postcode</label>
            <input
              type="postcode"
              name="postcode"
@@ -79,7 +83,8 @@ import React from 'react';
              value={values.postcode}
            />
            {errors.postcode && touched.postcode && errors.postcode}
-               <input
+           <label htmlFor="email">Email</label>
+          <input
              type="email"
              name="email"
              onChange={handleChange}
@@ -87,6 +92,7 @@ import React from 'react';
              value={values.email}
            />
           {errors.email && touched.email && errors.email}
+          <label htmlFor="petname">Pet name</label>
             <input
              type="petname"
              name="petname"
@@ -95,22 +101,42 @@ import React from 'react';
              value={values.petname}
            />
            {errors.petname && touched.petname && errors.petname}
+           <label htmlFor="petage">Pet age</label>
            <input
              type="petage"
              name="petage"
              onChange={handleChange}
              onBlur={handleBlur}
-             value={values.email}
+             value={values.petage}
            />
-           {errors.email && touched.email && errors.email}
+           {errors.petage && touched.petage && errors.petage}
+           <label htmlFor="pettype">Pet type</label>
            <input
-             type="password"
-             name="password"
+             type="pettype"
+             name="pettype"
              onChange={handleChange}
              onBlur={handleBlur}
-             value={values.password}
+             value={values.pettype}
            />
-           {errors.password && touched.password && errors.password}
+           {errors.pettype && touched.pettype && errors.pettype}
+           <label htmlFor="petbreed">Pet breed</label>
+           <input
+             type="petbreed"
+             name="petbreed"
+             onChange={handleChange}
+             onBlur={handleBlur}
+             value={values.petbreed}
+           />
+           {errors.petbreed && touched.petbreed && errors.petbreed}
+           <label htmlFor="numberofpets">Number of pets to insure</label>
+           <input
+             type="numberofpets"
+             name="numberofpets"
+             onChange={handleChange}
+             onBlur={handleBlur}
+             value={values.numberofpets}
+           />
+           {errors.numberofpets && touched.numberofpets && errors.numberofpets}
            <button type="submit" disabled={isSubmitting}>
              Submit
            </button>
