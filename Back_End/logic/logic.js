@@ -30,7 +30,7 @@ for (let i = 0 ; i<testData.pets.length; i++){
        } else {
            result1 = 120
        }
- total =result+result1
+ total = result+result1
  console.log(total)
 }
 
