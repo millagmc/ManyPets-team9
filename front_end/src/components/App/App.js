@@ -1,5 +1,4 @@
-
-import FormPets from './components/FormPets';
+import FormPets from '../FormPets/FormPets';
 import './App.css';
 
 function App() {
