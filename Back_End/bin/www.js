@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-import app from '../app';
+import app from '../app.js';
 import http from 'http';
 
 
@@ -29,6 +29,7 @@ var server = http.createServer(app);
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
+console.log(`listening on port ${port}`)
 
 /**
  * Normalize a port into a number, string, or false.
