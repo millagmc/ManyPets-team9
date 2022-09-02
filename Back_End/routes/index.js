@@ -1,9 +1,15 @@
 import express from "express";
 const router = express.Router();
 
-/* GET home page. */
+import {dummydata} from "../libs/data.js"
+
+
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  // res.render('index', { title: 'Express' });
+  res.json({
+    message: "success",
+    payload: dummydata
+  })
 });
 
 export default router; 
